@@ -12,13 +12,13 @@ pipeline {
             }
         }
         
-        stage('build') {
+        stage('Build') {
             steps {
                 sh 'pip install -r requirements.txt'
             }
         }
         
-        stage('test') {
+        stage('Test') {
             steps {
                 sh 'python -m pytest test_api.py'
             }       
